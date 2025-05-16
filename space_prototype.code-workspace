@@ -1,0 +1,879 @@
+{
+	"folders": [
+		{
+			"name": "space_prototype",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off",
+		"terminal.integrated.env.linux": {
+			"PATH": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+			"DOTNET_ROOT": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+			"DOTNET_HOST_PATH": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+			"DOTNET_MULTILEVEL_LOOKUP": "0",
+			"DOTNET_ROLL_FORWARD": "LatestMajor"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "space_prototype Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Test",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Test",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype Linux Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Test",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Shipping",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Shipping",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype Linux Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype Linux Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"Linux",
+					"Shipping",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype LinuxArm64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype LinuxArm64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype LinuxArm64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Test Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Test",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Test Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Test",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype LinuxArm64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Test Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Test",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Shipping Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Shipping",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Shipping",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototype LinuxArm64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototype LinuxArm64 Shipping Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototype",
+					"LinuxArm64",
+					"Shipping",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux Debug Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux Debug Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototypeEditor Linux Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux Debug Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"Debug",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux DebugGame Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototypeEditor Linux DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux DebugGame Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"DebugGame",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux Development Build",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux Development Rebuild",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"space_prototypeEditor Linux Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			},
+			{
+				"label": "space_prototypeEditor Linux Development Clean",
+				"group": "build",
+				"command": "Engine/Build/BatchFiles/Linux/Build.sh",
+				"args": [
+					"space_prototypeEditor",
+					"Linux",
+					"Development",
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-waitmutex",
+					"-clean"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch space_prototype (Debug)",
+				"request": "launch",
+				"program": "/mnt/sda1/Progetti/space_prototype/Binaries/Linux/UnrealGame-Linux-Debug",
+				"preLaunchTask": "space_prototype Linux Debug Build",
+				"args": [
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch space_prototype (DebugGame)",
+				"request": "launch",
+				"program": "/mnt/sda1/Progetti/space_prototype/Binaries/Linux/UnrealGame-Linux-DebugGame",
+				"preLaunchTask": "space_prototype Linux DebugGame Build",
+				"args": [
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch space_prototype (Development)",
+				"request": "launch",
+				"program": "/mnt/sda1/Progetti/space_prototype/Binaries/Linux/UnrealGame",
+				"preLaunchTask": "space_prototype Linux Development Build",
+				"args": [
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch space_prototype (Test)",
+				"request": "launch",
+				"program": "/mnt/sda1/Progetti/space_prototype/Binaries/Linux/UnrealGame-Linux-Test",
+				"preLaunchTask": "space_prototype Linux Test Build",
+				"args": [
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch space_prototype (Shipping)",
+				"request": "launch",
+				"program": "/mnt/sda1/Progetti/space_prototype/Binaries/Linux/UnrealGame-Linux-Shipping",
+				"preLaunchTask": "space_prototype Linux Shipping Build",
+				"args": [
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch space_prototypeEditor (Debug)",
+				"request": "launch",
+				"program": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/Linux/UnrealEditor-Linux-Debug",
+				"preLaunchTask": "space_prototypeEditor Linux Debug Build",
+				"args": [
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject"
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch space_prototypeEditor (DebugGame)",
+				"request": "launch",
+				"program": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/Linux/UnrealEditor-Linux-DebugGame",
+				"preLaunchTask": "space_prototypeEditor Linux DebugGame Build",
+				"args": [
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject"
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Launch space_prototypeEditor (Development)",
+				"request": "launch",
+				"program": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/Linux/UnrealEditor",
+				"preLaunchTask": "space_prototypeEditor Linux Development Build",
+				"args": [
+					"/mnt/sda1/Progetti/space_prototype/space_prototype.uproject"
+				],
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3",
+				"type": "cppdbg",
+				"visualizerFile": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Extras/VisualStudioDebugging/Unreal.natvis",
+				"showDisplayString": true
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Linux Development Build",
+				"program": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Build/BatchFiles/RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=/mnt/sda1/Progetti/space_prototype/space_prototype.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"env": {
+					"PATH": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64:${env:PATH}",
+					"DOTNET_ROOT": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64",
+					"DOTNET_HOST_PATH": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3/Engine/Binaries/ThirdParty/DotNet/8.0.300/linux-x64/dotnet",
+					"DOTNET_MULTILEVEL_LOOKUP": "0",
+					"DOTNET_ROLL_FORWARD": "LatestMajor"
+				},
+				"console": "internalConsole",
+				"internalConsoleOptions": "openOnSessionStart",
+				"stopAtEntry": false,
+				"cwd": "/home/salvatore/Scaricati/Linux_Unreal_Engine_5.5.3"
+			}
+		]
+	}
+}
